@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AcuMeal</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">   
+      <!-- <a id="logo-container" href="static/background1.jpg" class="brand-logo">Logo</a> -->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#signupform">AcuMeal</a></li>
+        <li><a href="#signupform">Signup</a></li>
+        <li><a href="#signupform">Learn More</a></li>
+      </ul>
+      
+    <ul class="left hide-on-med-and-down">
+      <a href="#signupform" class="navbar-left"><img style="max-width:170px; margin-top: 0px;" src="../static/Acumeal.png"></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </ul>
+    </div>
+     </a>
+  </nav>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">AcuMeal</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Vegan Meal Plans for the 21st Century</h5>
+        </div>
+        <div class="row center">
+          <a href="#signupform" id="#signupform" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="../static/background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Delivered To Your Doorstep</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide you the luxury of receiving the meals right to your front door. Additionally, we refined our delivery process to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Personalized Meal Plans</h5>
+
+            <p class="light">By utilizing machine learning and biology, we're able to create personalized meal plans that are catered to your dietary restrictions, medical conditions, and taste buds. Additionally, a single underlying responsive system across all plans allows for a more unified and enjoyable lifestyle.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Nutritionist Backed Meal Plans</h5>
+
+            <p class="light">We work closely with certified nutritionist who help validate all of our meal plans before finalizing them sending them to our customers. Additionaly, AcuMeal cares about its customers safety and interest from their day to day calorie intact to their yearly doctors visit.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="../static/team.png" alt="Unsplashed background img 2"></div>
+  </div>
+<br>
+<br>
+
+   <center> <img src="../static/Acumeal.png" alt="" class="logo" /> <center>
+<br>
+<br>
+  <div class="container">
+   <!-- <div class="section"> -->
+    {% if message %}
+      <em> <h2 style='color: red;' class='messge'>{{message | safe }} </h2> </em>
+    {% endif %}
+      <div class="row"> 
+        <div class="col s12 center"> 
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+
+      <!-- Form -->
+      <form id="signupform" action='/submit' method='POST' >
+        <div class='form-group'>
+        <u><h1>Get on Waitlist</h1></u>
+        <br>
+          <h4> First Name </h4>
+          <input type='text' name='first' placeholder='First Name'/>
+        </div>
+        <div class='form-group'>
+          <h4> Last Name </h4>
+          <input type='text' name='last' placeholder='Last Name'/>
+        </div>
+        <div class='form-group'>
+          <h4> Age </h4>
+          <input
+            type="number"
+            name="age"
+            placeholder="Age"
+          />
+          <h4>Gender</h4>
+            <select name="gender">
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+        </div>
+          <h4> Email </h4>
+          <input type='email' name='email' placeholder='Email'/>
+        </div>
+          <input type='submit' name='submit' class='btnnn'/>
+        </div>
+      </form>
+        </div>
+    </div>
+
+   </div> 
+ <!-- </div>
+-->
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Our Mission: Making sure you don't sacrifice menu options for health.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="../static/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Our Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        </div>
+
+        <div class="col l3 s12"> <!-- 
+         <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!"></a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul> -->
+        </div> 
+        <div class="col l3 s12">
+        <br>
+        <br>
+      <a href="#signupform" class="navbar-left"><img style="max-width:370px; margin-top: 0px;" src="../static/Acumeal.png"></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      copyright 2020</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../static/js/materialize.js"></script>
+  <script src="../static/js/init.js"></script>
+
+  </body>
+</html>
