@@ -3,6 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 # from send_mail import send_mail
 app = Flask(__name__)
 
+#pipenv shell
+
+
+#Login to Remote Database
+# heroku pg:psql --app acumeal
+# select * from feedback;
 
 ENV = 'prod'
 if ENV == 'dev':
