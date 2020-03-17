@@ -1,17 +1,17 @@
 from flask import Flask, render_template, request 
 from flask_sqlalchemy import SQLAlchemy
-
+# from send_mail import send_mail
 app = Flask(__name__)
 
 
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
     app.Debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:4511@localhost/Acumeal'
 
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ziilzoitskpeci:98542aa19defccb8869ec427bd9acbd712db5e72466ca308a2b045d9ff3ef278@ec2-18-235-97-230.compute-1.amazonaws.com:5432/d1h26qqjgr07qc'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wsinyadafhcyoq:61fcda68a6f75bd67ed8046d44a199f09f5edf7f03029c44e26a56bcc6c9c192@ec2-54-197-48-79.compute-1.amazonaws.com:5432/dco4nbp9mosq4'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
